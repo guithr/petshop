@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Content */
+  --content-primary: #ffffff;
+  --content-secondary: #98959d;
+  --content-tertiary: #666666;
+  --content-brand: #9282fa;
+
+  /* Background */
+  --background-primary: #151515;
+  --background-secondary: #1e1e1e;
+  --background-tertiary: #23242c;
+  --background-brand: #9282fa;
+  --background-highlights: #bdb4fa;
+
+  /* Border */
+  --border-primary: #3e3c41;
+  --border-secondary: #86818c;
+  --border-brand: #9282fa;
+  --border-divisor: #353339;
+
+  /* Accent */
+  --accent-blue: #027df0;
+  --accent-blue-light: #16487a;
+  --accent-yellow: #f0dc02;
+  --accent-yellow-light: #756e1b;
+  --accent-orange: #f09102;
+  --accent-orange-light: #75501b;
+
+  /* Base font-family */
+  --ff-base: "Inter", sans-serif;
+  --ff-inter-tight: "Inter Tight", serif;
+
+  /* Font sizes */
+  --fs-title: 1.5rem; /* 24px */
+  --fs-paragraph-md: 0.875rem; /* 14px */
+  --fs-paragraph-sm: 0.75rem; /* 12px */
+  --fs-label-lg: 1rem; /* 16px */
+  --fs-label-md: 0.875rem; /* 14px */
+  --fs-label-sm: 0.75rem; /* 12px */
+  --fs-link: 0.75rem; /* 12px */
+
+  /* Line heights */
+  --lh-title: 2rem;
+  --lh-paragraph-md: 1.5rem; /* 24px */
+  --lh-paragraph-sm: 1rem; /* 16px */
+  --lh-label-lg: 1.5rem; /* 24px */
+  --lh-label-md: 1.5rem; /* 24px */
+  --lh-label-sm: 1rem; /* 16px */
+  --lh-link: 1rem; /* 16px */
+
+  /* Font weights */
+  --fw-bold: 700;
+  --fw-sb: 600;
+  --fw-md: 500;
+  --fw-sm: 400;
+}
+
+body {
+  background-color: #14151d;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 54.375rem;
+
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: #2e2c30;
+
+  padding: 0.875rem 1.25rem;
+
+  border-bottom-right-radius: 0.75rem;
+}
+
+.input {
+  display: flex;
+
+  height: 3rem;
+
+  border: 1px solid var(--border-primary);
+  border-radius: 0.5rem;
+
+  padding: 0.75rem 0.875rem;
+
+  & i {
+    margin-right: 0.5rem;
+  }
+
+  & input {
+    font-family: "Catamaran", sans-serif;
+    font-size: 1rem;
+
+    color: var(--content-secondary);
+    background-color: transparent;
+
+    outline: none;
+    border: none;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  background: url("../assets/arrow-down.svg") no-repeat;
+}

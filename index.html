@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- PRECONNECT GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TITLE -->
+    <title>Mundo Pet</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="stylesheet" href="./styles/schedule.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img class="logo" src="./assets/logo.svg" alt="Lotipo mundo pet" />
+
+      <section class="hero">
+        <header class="introduction">
+          <h1>Sua agenda</h1>
+          <p>
+            Aqui você pode ver todos os clientes e serviços agendados para hoje.
+          </p>
+        </header>
+        <div class="input">
+          <i><img src="./assets/calendar.svg" alt="Calendário" /></i>
+          <input type="date" id="date" name="date" required />
+        </div>
+      </section>
+
+      <section class="schedule">
+        <section class="schedule-period">
+          <header>
+            <div class="info">
+              <img src="./assets/sun-fog.svg" alt="Manhã" />
+              <strong>Manhã</strong>
+            </div>
+            <span>09h-12h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <li>
+              <strong>11:00</strong>
+              <p><span>Thor</span><span> / Fernanda Costa</span></p>
+              <span>Vacinação</span>
+              <span>Remover agendamento</span>
+            </li>
+          </ul>
+        </section>
+        <section class="schedule-period">
+          <header>
+            <div class="info">
+              <img src="./assets/morning.svg" alt="Tarde" />
+              <strong>Tarde</strong>
+            </div>
+            <span>13-18h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <li>
+              <strong>13:00</strong>
+              <p><span>Mel</span><span> / João Souza</span></p>
+              <span>Vacinação</span>
+              <span>Remover agendamento</span>
+            </li>
+            <li>
+              <strong>17:00</strong>
+              <p><span>Bella</span><span> / Pedro Martin</span></p>
+              <span>Vacinação</span>
+              <span>Remover agendamento</span>
+            </li>
+          </ul>
+        </section>
+        <section class="schedule-period">
+          <header>
+            <div class="info">
+              <img src="./assets/night.svg" alt="Noite" />
+              <strong>Tarde</strong>
+            </div>
+            <span>19-21h</span>
+          </header>
+          <ul id="period-morning" class="period">
+            <li>
+              <strong>21:00</strong>
+              <p><span>Spike</span><span> / Guilherme Matos</span></p>
+              <span>Vacinação</span>
+              <span>Remover agendamento</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>
