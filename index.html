@@ -1,97 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- PRECONNECT GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- GOOGLE FONT -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- TITLE -->
     <title>Mundo Pet</title>
-
-    <!-- GOOGLE FONTS -->
     <link rel="stylesheet" href="./styles/schedule.css" />
   </head>
   <body>
     <div class="container">
-      <img class="logo" src="./assets/logo.svg" alt="Lotipo mundo pet" />
+      <img class="logo" src="./assets/logo.svg" alt="Logotipo Mundo Pet" />
 
       <section class="hero">
         <header class="introduction">
-          <h1>Sua agenda</h1>
-          <p>
+          <h1 class="hero-title">Sua agenda</h1>
+          <p class="hero-description">
             Aqui você pode ver todos os clientes e serviços agendados para hoje.
           </p>
         </header>
-        <div class="input">
+        <div class="date-input">
           <i><img src="./assets/calendar.svg" alt="Calendário" /></i>
           <input type="date" id="date" name="date" required />
         </div>
       </section>
 
       <section class="schedule">
-        <section class="schedule-period">
-          <header>
+        <section class="schedule-period morning">
+          <header class="schedule-header">
             <div class="info">
               <img src="./assets/sun-fog.svg" alt="Manhã" />
-              <strong>Manhã</strong>
+              <strong class="period-name">Manhã</strong>
             </div>
-            <span>09h-12h</span>
+            <span class="period-time">09h-12h</span>
           </header>
-          <ul id="period-morning" class="period">
-            <li>
-              <strong>11:00</strong>
-              <p><span>Thor</span><span> / Fernanda Costa</span></p>
-              <span>Vacinação</span>
-              <button>Remover agendamento</button>
+          <ul class="period-list">
+            <li class="appointment">
+              <strong class="appointment-time">11:00</strong>
+              <p class="appointment-details">
+                <span class="pet-name">Thor</span>
+                <span class="owner-name"> / Fernanda Costa</span>
+              </p>
+              <span class="service-name">Vacinação</span>
+              <button class="remove-button">Remover agendamento</button>
             </li>
           </ul>
         </section>
-        <section class="schedule-period">
-          <header>
+
+        <!-- Repetindo as demais seções (tarde e noite) -->
+        <section class="schedule-period afternoon">
+          <header class="schedule-header">
             <div class="info">
               <img src="./assets/morning.svg" alt="Tarde" />
-              <strong>Tarde</strong>
+              <strong class="period-name">Tarde</strong>
             </div>
-            <span>13-18h</span>
+            <span class="period-time">13-18h</span>
           </header>
-          <ul id="period-morning" class="period">
-            <li>
-              <strong>13:00</strong>
-              <p><span>Mel</span><span> / João Souza</span></p>
-              <span>Aplicação de Anti-pulgas</span>
-              <button>Remover agendamento</button>
-            </li>
-            <li>
-              <strong>17:00</strong>
-              <p><span>Bella</span><span> / Pedro Martin</span></p>
-              <span>Tosa Higiênica</span>
-              <button>Remover agendamento</button>
+          <ul class="period-list">
+            <li class="appointment">
+              <strong class="appointment-time">13:00</strong>
+              <p class="appointment-details">
+                <span class="pet-name">Mel</span>
+                <span class="owner-name"> / João Souza</span>
+              </p>
+              <span class="service-name">Aplicação de Anti-pulgas</span>
+              <button class="remove-button">Remover agendamento</button>
             </li>
           </ul>
         </section>
-        <section class="schedule-period">
-          <header>
+
+        <section class="schedule-period night">
+          <header class="schedule-header">
             <div class="info">
               <img src="./assets/night.svg" alt="Noite" />
-              <strong>Noite</strong>
+              <strong class="period-name">Noite</strong>
             </div>
-            <span>19-21h</span>
+            <span class="period-time">19-21h</span>
           </header>
-          <ul id="period-morning" class="period">
-            <li>
-              <strong>21:00</strong>
-              <p><span>Spike</span><span> / Guilherme Matos</span></p>
-              <span>Limpeza de Dentes</span>
-              <button>Remover agendamento</button>
+          <ul class="period-list">
+            <li class="appointment">
+              <strong class="appointment-time">21:00</strong>
+              <p class="appointment-details">
+                <span class="pet-name">Spike</span>
+                <span class="owner-name"> / Guilherme Matos</span>
+              </p>
+              <span class="service-name">Limpeza de Dentes</span>
+              <button class="remove-button">Remover agendamento</button>
             </li>
           </ul>
         </section>

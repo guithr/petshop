@@ -93,7 +93,7 @@ ul {
   border-bottom-right-radius: 0.75rem;
 }
 
-.input {
+.date-input {
   display: flex;
 
   height: 3rem;

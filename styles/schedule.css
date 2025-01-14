@@ -1,20 +1,25 @@
 @import url(./global.css);
 
+.container {
+  .logo {
+    margin-bottom: 2rem;
+  }
+}
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   margin-bottom: 2rem;
-  & .introduction {
-    h1 {
-      color: var(--content-primary);
 
+  .introduction {
+    .hero-title {
+      color: var(--content-primary);
       font: var(--fw-bold) var(--fs-title) / var(--lh-title) var(--ff-base);
     }
-    p {
-      color: var(--content-secondary);
 
+    .hero-description {
+      color: var(--content-secondary);
       font: var(--fw-md) var(--fs-paragraph-md) / var(--lh-paragraph-md)
         var(--ff-inter-tight);
     }
@@ -24,81 +29,86 @@
 .schedule {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.5rem;
 
-  & .schedule-period {
-    border-radius: 0.625rem;
+  .schedule-period {
     background-color: var(--background-tertiary);
-    header {
+    border-radius: 0.625rem;
+
+    .schedule-header {
       padding: 0.75rem 1.25rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
+
       .info {
         display: flex;
         align-items: center;
-        strong {
+
+        .period-name {
           margin-left: 0.75rem;
           font: var(--fw-bold) var(--fs-label-lg) / var(--lh-paragraph-md)
             var(--ff-inter-tight);
-
           color: var(--content-primary);
         }
       }
-      & span {
+
+      .period-time {
         font: var(--fw-bold) var(--fs-label-lg) / var(--lh-paragraph-md)
           var(--ff-inter-tight);
-
         color: var(--content-secondary);
       }
     }
-    ul {
-      border-top: 1px solid var(--border-divisor);
 
+    .period-list {
+      border-top: 1px solid var(--border-divisor);
       padding: 1.25rem;
-      & li:not(:last-child) {
-        border-bottom: 1px solid var(--border-divisor); /* Adiciona a borda */
-      }
-      & li {
+
+      .appointment {
         display: flex;
         align-items: center;
         padding: 0.75rem;
-        & strong {
+
+        &:not(:last-child) {
+          border-bottom: 1px solid var(--border-divisor);
+        }
+
+        .appointment-time {
           font: var(--fw-bold) var(--fs-label-md) / var(--lh-paragraph-md)
             var(--ff-inter-tight);
-
           color: var(--content-primary);
-
           margin-right: 1rem;
         }
-        & p {
+
+        .appointment-details {
           flex: 1;
-          & span:nth-child(1) {
+
+          .pet-name {
             font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm)
               var(--ff-base);
             color: var(--content-primary);
           }
-          & span:nth-child(2) {
+
+          .owner-name {
             font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
               var(--ff-base);
             color: var(--content-secondary);
           }
         }
-        & span:nth-child(3) {
-          flex: 1;
 
+        .service-name {
+          flex: 1;
           font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
             var(--ff-base);
           color: var(--content-secondary);
         }
-        & button {
+
+        .remove-button {
           font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
             var(--ff-base);
           color: var(--content-tertiary);
-
           border: none;
           background: none;
-
           cursor: pointer;
         }
       }
@@ -110,18 +120,13 @@
   position: absolute;
   bottom: 1.875rem;
   right: 1.875rem;
-
   padding: 0.75rem 1.5rem;
-
   text-transform: uppercase;
   font: var(--fw-bold) var(--fs-label-lg) / var(--lh-label-lg)
     var(--ff-inter-tight);
-
   background-color: var(--background-brand);
-
   border-radius: 0.5rem;
   border: none;
   box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
-
   cursor: pointer;
 }
