@@ -63,7 +63,6 @@
 
 body {
   background-color: #14151d;
-  position: relative;
 }
 
 ul {
@@ -122,4 +121,10 @@ ul {
 ::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background: url("../assets/arrow-down.svg") no-repeat;
+}
+
+@media (width <= 48em) {
+  .container {
+    padding: 4rem 2.5rem;
+  }
 }

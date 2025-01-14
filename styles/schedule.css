@@ -74,7 +74,7 @@
         }
 
         .appointment-time {
-          font: var(--fw-bold) var(--fs-label-md) / var(--lh-paragraph-md)
+          font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm)
             var(--ff-inter-tight);
           color: var(--content-primary);
           margin-right: 1rem;
@@ -82,7 +82,8 @@
 
         .appointment-details {
           flex: 1;
-
+          display: flex;
+          align-items: center;
           .pet-name {
             font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm)
               var(--ff-base);
@@ -90,6 +91,7 @@
           }
 
           .owner-name {
+            margin-left: 0.25rem;
             font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
               var(--ff-base);
             color: var(--content-secondary);
@@ -117,10 +119,8 @@
 }
 
 .new-schedule {
-  position: absolute;
-  bottom: 1.875rem;
-  right: 1.875rem;
   padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
   text-transform: uppercase;
   font: var(--fw-bold) var(--fs-label-lg) / var(--lh-label-lg)
     var(--ff-inter-tight);
@@ -129,4 +129,45 @@
   border: none;
   box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
   cursor: pointer;
+}
+
+@media (width <= 42.875em) {
+  .hero {
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .new-schedule {
+    box-shadow: 0px 0px 20px rgba(146, 130, 250, 0.3);
+  }
+
+  .schedule {
+    & .schedule-period {
+      & .period-list {
+        .appointment {
+          display: grid;
+          grid-template-areas:
+            "appointment-time appointment-details"
+            "service-name service-name"
+            "remove-button remove-button";
+          grid-template-columns: auto 1fr;
+          & .appointment-time {
+            grid-area: appointment-time;
+          }
+          & .appointment-details {
+            grid-area: appointment-details;
+          }
+          & .service-name {
+            margin-block: 1rem;
+            grid-area: service-name;
+          }
+          & .remove-button {
+            text-align: right;
+            grid-area: remove-button;
+          }
+        }
+      }
+    }
+  }
 }
