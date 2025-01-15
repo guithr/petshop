@@ -94,8 +94,10 @@
           </ul>
         </section>
       </section>
-
-      <section class="schedule-modal">
+      <button class="new-schedule btn-primary">Novo agendamento</button>
+    </div>
+    <section class="schedule-modal">
+      <div class="box-form">
         <form action="">
           <header>
             <h2>Agende um atendimento</h2>
@@ -142,7 +144,9 @@
             <div class="input-wrapper">
               <label for="date">Data</label>
               <div class="input">
-                <i><img src="./assets/phone.svg" alt="Ícone usuário" /></i>
+                <i
+                  ><img src="./assets/calendar.svg" alt="Ícone Calendário"
+                /></i>
                 <input type="date" id="date" />
               </div>
             </div>
@@ -150,7 +154,10 @@
               <label for="hour">Hora</label>
               <div class="input">
                 <i
-                  ><img src="./assets/phone.svg" alt="Ícone usuário" id="hour"
+                  ><img
+                    src="./assets/clock-circle.svg"
+                    alt="Ícone relógio"
+                    id="hour"
                 /></i>
                 <input type="time" />
               </div>
@@ -159,9 +166,7 @@
 
           <button type="submit" class="btn-primary">AGENDAR</button>
         </form>
-      </section>
-
-      <button class="new-schedule btn-primary">Novo agendamento</button>
-    </div>
+      </div>
+    </section>
   </body>
 </html>

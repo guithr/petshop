@@ -62,6 +62,7 @@
 }
 
 body {
+  overflow-y: hidden;
   background-color: #14151d;
 }
 
@@ -84,6 +85,8 @@ ul {
   position: absolute;
   top: 0;
   left: 0;
+
+  z-index: 1;
 
   background-color: #2e2c30;
 
@@ -121,6 +124,12 @@ ul {
 ::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background: url("../assets/arrow-down.svg") no-repeat;
+}
+
+@media (width <= 51.25rem) {
+  .logo {
+    z-index: 0;
+  }
 }
 
 @media (width <= 48em) {
