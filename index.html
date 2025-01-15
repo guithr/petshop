@@ -95,7 +95,73 @@
         </section>
       </section>
 
-      <button class="new-schedule">Novo agendamento</button>
+      <section class="schedule-modal">
+        <form action="">
+          <header>
+            <h2>Agende um atendimento</h2>
+            <p>Preencha os dados do cliente para realizar o agendamento:</p>
+          </header>
+
+          <div class="input-wrapper">
+            <label for="tutor-name">Nome do tutor</label>
+            <div class="input">
+              <i><img src="./assets/user.svg" alt="Ícone usuário" /></i>
+              <input type="text" placeholder="Helena" id="tutor-name" />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="pet-name">Nome do pet</label>
+            <div class="input">
+              <i><img src="./assets/pet-paw.svg" alt="Ícone usuário" /></i>
+              <input type="text" placeholder="Thor" id="pet-name" />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="phone">Telefone</label>
+            <div class="input">
+              <i><img src="./assets/phone.svg" alt="Ícone usuário" /></i>
+              <input type="text" placeholder="(00) 0 0000-0000" id="phone" />
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="service-description">Descrição do serviço</label>
+            <div class="input">
+              <textarea
+                name=""
+                id=""
+                placeholder="Banho e tosa"
+                id="service-description"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="box-wrapper">
+            <div class="input-wrapper">
+              <label for="date">Data</label>
+              <div class="input">
+                <i><img src="./assets/phone.svg" alt="Ícone usuário" /></i>
+                <input type="date" id="date" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="hour">Hora</label>
+              <div class="input">
+                <i
+                  ><img src="./assets/phone.svg" alt="Ícone usuário" id="hour"
+                /></i>
+                <input type="time" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary">AGENDAR</button>
+        </form>
+      </section>
+
+      <button class="new-schedule btn-primary">Novo agendamento</button>
     </div>
   </body>
 </html>
