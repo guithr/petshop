@@ -9,13 +9,16 @@
       href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="icon" href="./src/assets/pet-paw.svg" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
     <title>Mundo Pet</title>
-    <link rel="stylesheet" href="./styles/schedule.css" />
   </head>
   <body>
     <div class="container">
-      <img class="logo" src="./assets/logo.svg" alt="Logotipo Mundo Pet" />
+      <img class="logo" src="./src/assets/logo.svg" alt="Logotipo Mundo Pet" />
 
+      <!-- HERO SECTION -->
       <section class="hero">
         <header class="introduction">
           <h1 class="hero-title">Sua agenda</h1>
@@ -24,16 +27,18 @@
           </p>
         </header>
         <div class="date-input">
-          <i><img src="./assets/calendar.svg" alt="Calendário" /></i>
+          <i><img src="./src/assets/calendar.svg" alt="Calendário" /></i>
           <input type="date" id="date" name="date" required />
         </div>
       </section>
 
+      <!-- CONTAINER SCHEDULE -->
       <section class="schedule">
+        <!-- Seção MANHÃ -->
         <section class="schedule-period morning">
           <header class="schedule-header">
             <div class="info">
-              <img src="./assets/sun-fog.svg" alt="Manhã" />
+              <img src="./src/assets/sun-fog.svg" alt="Manhã" />
               <strong class="period-name">Manhã</strong>
             </div>
             <span class="period-time">09h-12h</span>
@@ -51,11 +56,11 @@
           </ul>
         </section>
 
-        <!-- Repetindo as demais seções (tarde e noite) -->
+        <!-- Seção TARDE -->
         <section class="schedule-period afternoon">
           <header class="schedule-header">
             <div class="info">
-              <img src="./assets/morning.svg" alt="Tarde" />
+              <img src="./src/assets/morning.svg" alt="Tarde" />
               <strong class="period-name">Tarde</strong>
             </div>
             <span class="period-time">13-18h</span>
@@ -73,10 +78,11 @@
           </ul>
         </section>
 
+        <!-- Seção NOITE -->
         <section class="schedule-period night">
           <header class="schedule-header">
             <div class="info">
-              <img src="./assets/night.svg" alt="Noite" />
+              <img src="./src/assets/night.svg" alt="Noite" />
               <strong class="period-name">Noite</strong>
             </div>
             <span class="period-time">19-21h</span>
@@ -94,9 +100,12 @@
           </ul>
         </section>
       </section>
+
+      <!-- BUTTON NEW SCHEDULE -->
       <button class="new-schedule btn-primary">Novo agendamento</button>
 
-      <!-- <section class="schedule-modal">
+      <!-- CONTAINER MODAL SCHEDULE -->
+      <section class="schedule-modal">
         <div class="box-form">
           <form action="">
             <header>
@@ -107,7 +116,7 @@
             <div class="input-wrapper">
               <label for="tutor-name">Nome do tutor</label>
               <div class="input">
-                <i><img src="./assets/user.svg" alt="Ícone usuário" /></i>
+                <i><img src="./src/assets/user.svg" alt="Ícone usuário" /></i>
                 <input type="text" placeholder="Helena" id="tutor-name" />
               </div>
             </div>
@@ -115,7 +124,9 @@
             <div class="input-wrapper">
               <label for="pet-name">Nome do pet</label>
               <div class="input">
-                <i><img src="./assets/pet-paw.svg" alt="Ícone usuário" /></i>
+                <i
+                  ><img src="./src/assets/pet-paw.svg" alt="Ícone usuário"
+                /></i>
                 <input type="text" placeholder="Thor" id="pet-name" />
               </div>
             </div>
@@ -123,7 +134,7 @@
             <div class="input-wrapper">
               <label for="phone">Telefone</label>
               <div class="input">
-                <i><img src="./assets/phone.svg" alt="Ícone usuário" /></i>
+                <i><img src="./src/assets/phone.svg" alt="Ícone usuário" /></i>
                 <input type="text" placeholder="(00) 0 0000-0000" id="phone" />
               </div>
             </div>
@@ -145,7 +156,9 @@
                 <label for="date">Data</label>
                 <div class="input">
                   <i
-                    ><img src="./assets/calendar.svg" alt="Ícone Calendário"
+                    ><img
+                      src="./src/assets/calendar.svg"
+                      alt="Ícone Calendário"
                   /></i>
                   <input type="date" id="date" />
                 </div>
@@ -155,7 +168,7 @@
                 <div class="input">
                   <i
                     ><img
-                      src="./assets/clock-circle.svg"
+                      src="./src/assets/clock-circle.svg"
                       alt="Ícone relógio"
                       id="hour"
                   /></i>
@@ -167,7 +180,7 @@
             <button type="submit" class="btn-primary">AGENDAR</button>
           </form>
         </div>
-      </section> -->
+      </section>
     </div>
   </body>
 </html>

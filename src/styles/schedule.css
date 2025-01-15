@@ -1,0 +1,162 @@
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.hero .introduction .hero-title {
+  color: var(--content-primary);
+  font: var(--fw-bold) var(--fs-title) / var(--lh-title) var(--ff-base);
+}
+
+.hero .introduction .hero-description {
+  color: var(--content-secondary);
+  font: var(--fw-md) var(--fs-paragraph-md) / var(--lh-paragraph-md)
+    var(--ff-inter-tight);
+}
+
+/* Schedule */
+.schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.schedule .schedule-period {
+  background-color: var(--background-tertiary);
+  border-radius: 0.625rem;
+}
+
+.schedule .schedule-period .schedule-header {
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule .schedule-period .schedule-header .info {
+  display: flex;
+  align-items: center;
+}
+
+.schedule .schedule-period .schedule-header .info .period-name {
+  margin-left: 0.75rem;
+  font: var(--fw-bold) var(--fs-label-lg) / var(--lh-paragraph-md)
+    var(--ff-inter-tight);
+  color: var(--content-primary);
+}
+
+.schedule .schedule-period .schedule-header .period-time {
+  font: var(--fw-bold) var(--fs-label-lg) / var(--lh-paragraph-md)
+    var(--ff-inter-tight);
+  color: var(--content-secondary);
+}
+
+.schedule .schedule-period .period-list {
+  border-top: 1px solid var(--border-divisor);
+  padding: 1.25rem;
+}
+
+.schedule .schedule-period .period-list .appointment {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+.schedule .schedule-period .period-list .appointment:not(:last-child) {
+  border-bottom: 1px solid var(--border-divisor);
+}
+
+.schedule .schedule-period .period-list .appointment .appointment-time {
+  font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm)
+    var(--ff-inter-tight);
+  color: var(--content-primary);
+  margin-right: 1rem;
+}
+
+.schedule .schedule-period .period-list .appointment .appointment-details {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.schedule
+  .schedule-period
+  .period-list
+  .appointment
+  .appointment-details
+  .pet-name {
+  font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm) var(--ff-base);
+  color: var(--content-primary);
+}
+
+.schedule
+  .schedule-period
+  .period-list
+  .appointment
+  .appointment-details
+  .owner-name {
+  margin-left: 0.25rem;
+  font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
+    var(--ff-base);
+  color: var(--content-secondary);
+}
+
+.schedule .schedule-period .period-list .appointment .service-name {
+  flex: 1;
+  font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
+    var(--ff-base);
+  color: var(--content-secondary);
+}
+
+.schedule .schedule-period .period-list .appointment .remove-button {
+  font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
+    var(--ff-base);
+  color: var(--content-tertiary);
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+}
+
+.schedule .schedule-period .period-list .appointment .remove-button:hover {
+  color: var(--content-primary);
+  text-decoration: underline;
+}
+
+@media (width <= 42.875em) {
+  .hero {
+    gap: 0.75rem;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .schedule .schedule-period .period-list .appointment {
+    display: grid;
+    grid-template-areas:
+      "appointment-time appointment-details"
+      "service-name service-name"
+      "remove-button remove-button";
+    grid-template-columns: auto 1fr;
+  }
+
+  .schedule .schedule-period .period-list .appointment .appointment-time {
+    grid-area: appointment-time;
+  }
+
+  .schedule .schedule-period .period-list .appointment .appointment-details {
+    grid-area: appointment-details;
+  }
+
+  .schedule .schedule-period .period-list .appointment .service-name {
+    margin-block: 1rem;
+    grid-area: service-name;
+  }
+
+  .schedule .schedule-period .period-list .appointment .remove-button {
+    text-align: right;
+    grid-area: remove-button;
+  }
+}
