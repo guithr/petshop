@@ -27,7 +27,13 @@
         </header>
         <div class="date-input">
           <i><img src="./src/assets/calendar.svg" alt="Calendário" /></i>
-          <input type="date" id="date" name="date" required />
+          <input
+            type="date"
+            class="date"
+            id="search-date"
+            name="date"
+            required
+          />
         </div>
       </section>
 
@@ -152,14 +158,14 @@
 
             <div class="box-wrapper">
               <div class="input-wrapper">
-                <label for="date">Data</label>
+                <label for="createDate">Data</label>
                 <div class="input">
                   <i
                     ><img
                       src="./src/assets/calendar.svg"
                       alt="Ícone Calendário"
                   /></i>
-                  <input type="date" id="date" />
+                  <input type="date" id="create-date" class="date" />
                 </div>
               </div>
               <div class="input-wrapper">
@@ -169,9 +175,18 @@
                     ><img
                       src="./src/assets/clock-circle.svg"
                       alt="Ícone relógio"
-                      id="hour"
                   /></i>
-                  <input type="time" />
+                  <!-- <input
+                    type="time"
+                    name="hour"
+                    id="hour"
+                    step="3600"
+                    min="08:00"
+                    max="22:00"
+                  /> -->
+                  <select name="hours" id="hours">
+                    <option value="">Selecione o valor</option>
+                  </select>
                 </div>
               </div>
             </div>
