@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { openingHours } from "../../utils/opening-hours";
+import { hoursClick } from "./hours-click";
 
 const hours = document.getElementById("hours");
 
@@ -16,6 +17,7 @@ export function hoursLoad({ date }) {
     };
   });
 
+  //Renderiza os horários
   opening.forEach(({ hour, available }) => {
     const option = document.createElement("option");
 
@@ -29,4 +31,7 @@ export function hoursLoad({ date }) {
 
     hours.append(option);
   });
+
+  //Adiciona o evento de clique nos horários disponíveis
+  hoursClick();
 }
