@@ -112,7 +112,7 @@
       <!-- CONTAINER MODAL SCHEDULE -->
       <section class="schedule-modal">
         <div class="box-form">
-          <form action="">
+          <form action="" autocomplete="off">
             <header>
               <h2>Agende um atendimento</h2>
               <p>Preencha os dados do cliente para realizar o agendamento:</p>
@@ -145,7 +145,12 @@
               <label for="phone">Telefone</label>
               <div class="input">
                 <i><img src="./src/assets/phone.svg" alt="Ícone usuário" /></i>
-                <input type="text" placeholder="(00) 0 0000-0000" id="phone" />
+                <input
+                  type="tel"
+                  placeholder="(00) 0 0000-0000"
+                  id="phone"
+                  maxlength="15"
+                />
               </div>
             </div>
 
@@ -153,8 +158,7 @@
               <label for="service-description">Descrição do serviço</label>
               <div class="input">
                 <textarea
-                  name=""
-                  id=""
+                  name="service-description"
                   placeholder="Banho e tosa"
                   id="service-description"
                 ></textarea>

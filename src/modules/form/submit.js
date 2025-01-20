@@ -1,12 +1,13 @@
 import dayjs from "dayjs";
+import { scheduleNew } from "../../services/schedule-new.js";
 
 const form = document.querySelector("form");
 const searchDate = document.getElementById("search-date");
 const createDate = document.getElementById("create-date");
-const inputName = document.getElementById("tutor-name");
-
-//Input hour
-const getHour = document.getElementById("hour");
+const nameInput = document.getElementById("tutor-name");
+const petNameInput = document.getElementById("pet-name");
+const phoneInput = document.getElementById("phone");
+const descriptionServiceInput = document.getElementById("service-description");
 
 //Carrega a data Atual automatizada.
 const today = dayjs(new Date()).format("YYYY-MM-DD");
@@ -17,23 +18,61 @@ createDate.min = today;
 
 searchDate.value = today;
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
   event.preventDefault();
-
   try {
-    //Recupara o valor do campo nome digitado pelo cliente.
-    const userName = inputName.value.trim();
+    const userName = nameInput.value.trim(); // Nome do cliente
+    const namePet = petNameInput.value.trim(); // Nome do Pet
+    const numberPhone = phoneInput.value.trim(); // Supondo que este seja o campo de telefone
+    const serviceDescription = descriptionServiceInput.value.trim(); // Descrição do serviço
+    const hourSelected = document.querySelector(".hour-selected"); // Seleciona o horário
 
-    //Segunda validação.
+    // Função para obter apenas os números do telefone
+    const phoneNumber = (raw) => {
+      return raw.replace(/\D/g, ""); // Remove tudo que não é número
+    };
+
+    // Obtemos o número de telefone limpo
+    const cleanedNumber = phoneNumber(numberPhone);
+
+    // Validações
     if (!userName) {
-      alert("Informe o nome do cliente.");
+      return alert("Informe o nome do cliente.");
     }
-    console.log(userName);
+    if (!namePet) {
+      return alert("Informe o nome do Pet.");
+    }
+    if (!numberPhone || cleanedNumber.length < 11) {
+      return alert("Informe um número de telefone válido com 11 dígitos.");
+    }
+    if (!serviceDescription) {
+      return alert("Informe a descrição do serviço.");
+    }
+    if (!hourSelected) {
+      return alert("Informe um horário disponível.");
+    }
 
-    //Pegar horário selecionado pelo cliente.
-    const hourSelected = document.querySelector(".hour-selected");
+    //  Recupera somente o horário selecionado
+    const [hour] = hourSelected.innerText.split(":");
+    console.log(hour);
+
+    // Inserir a hora na data
+    const when = dayjs(createDate.value).add(hour, "hour");
+    console.log(when);
+    //Gerar um ID
+    const id = new Date().getTime();
+
+    await scheduleNew({
+      id,
+      userName,
+      namePet,
+      cleanedNumber,
+      serviceDescription,
+      when,
+      hour,
+    });
   } catch (error) {
-    console.log(error);
+    console.error(error);
     alert("Não foi possível realizar o agendamento.");
   }
 };

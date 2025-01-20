@@ -122,11 +122,6 @@ option {
   background-color: var(--background-tertiary);
 }
 
-.hour-selected {
-  color: red;
-  background-color: #027df0;
-}
-
 .hour-available {
   color: var(--content-primary);
 }
