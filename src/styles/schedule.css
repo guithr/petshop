@@ -54,47 +54,42 @@
   color: var(--content-secondary);
 }
 
-.schedule .schedule-period .period-list {
+.schedule .schedule-period .period {
   border-top: 1px solid var(--border-divisor);
   padding: 1.25rem;
 }
 
-.schedule .schedule-period .period-list .appointment {
+.schedule .schedule-period .period .appointment {
   display: flex;
   align-items: center;
   padding: 0.75rem;
 }
 
-.schedule .schedule-period .period-list .appointment:not(:last-child) {
+.schedule .schedule-period .period .appointment:not(:last-child) {
   border-bottom: 1px solid var(--border-divisor);
 }
 
-.schedule .schedule-period .period-list .appointment .appointment-time {
+.schedule .schedule-period .period .appointment .appointment-time {
   font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm)
     var(--ff-inter-tight);
   color: var(--content-primary);
   margin-right: 1rem;
 }
 
-.schedule .schedule-period .period-list .appointment .appointment-details {
+.schedule .schedule-period .period .appointment .appointment-details {
   flex: 1;
   display: flex;
   align-items: center;
 }
 
-.schedule
-  .schedule-period
-  .period-list
-  .appointment
-  .appointment-details
-  .pet-name {
+.schedule .schedule-period .period .appointment .appointment-details .pet-name {
   font: var(--fw-sb) var(--fs-label-sm) / var(--lh-label-sm) var(--ff-base);
   color: var(--content-primary);
 }
 
 .schedule
   .schedule-period
-  .period-list
+  .period
   .appointment
   .appointment-details
   .owner-name {
@@ -104,14 +99,14 @@
   color: var(--content-secondary);
 }
 
-.schedule .schedule-period .period-list .appointment .service-name {
+.schedule .schedule-period .period .appointment .service-name {
   flex: 1;
   font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
     var(--ff-base);
   color: var(--content-secondary);
 }
 
-.schedule .schedule-period .period-list .appointment .remove-button {
+.schedule .schedule-period .period .appointment .remove-button {
   font: var(--fw-sm) var(--fs-paragraph-sm) / var(--lh-paragraph-sm)
     var(--ff-base);
   color: var(--content-tertiary);
@@ -121,7 +116,7 @@
   transition: all 0.1s ease-out;
 }
 
-.schedule .schedule-period .period-list .appointment .remove-button:hover {
+.schedule .schedule-period .period .appointment .remove-button:hover {
   color: var(--content-primary);
   text-decoration: underline;
 }
@@ -133,7 +128,7 @@
     align-items: start;
   }
 
-  .schedule .schedule-period .period-list .appointment {
+  .schedule .schedule-period .period .appointment {
     display: grid;
     grid-template-areas:
       "appointment-time appointment-details"
@@ -142,20 +137,20 @@
     grid-template-columns: auto 1fr;
   }
 
-  .schedule .schedule-period .period-list .appointment .appointment-time {
+  .schedule .schedule-period .period .appointment .appointment-time {
     grid-area: appointment-time;
   }
 
-  .schedule .schedule-period .period-list .appointment .appointment-details {
+  .schedule .schedule-period .period .appointment .appointment-details {
     grid-area: appointment-details;
   }
 
-  .schedule .schedule-period .period-list .appointment .service-name {
+  .schedule .schedule-period .period .appointment .service-name {
     margin-block: 1rem;
     grid-area: service-name;
   }
 
-  .schedule .schedule-period .period-list .appointment .remove-button {
+  .schedule .schedule-period .period .appointment .remove-button {
     text-align: right;
     grid-area: remove-button;
   }

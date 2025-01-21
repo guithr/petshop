@@ -1,7 +1,13 @@
-import { scheduleDay } from "../schedules/load.js";
+import { scheduleDay, searchSchedules } from "../schedules/load.js";
 
+// Página inicial - busca os agendamentos
 const searchDate = document.getElementById("search-date");
-const createDate = document.getElementById("create-date");
+if (searchDate) {
+  searchDate.addEventListener("change", () => searchSchedules());
+}
 
-searchDate.onchange = () => scheduleDay();
-createDate.onchange = () => scheduleDay();
+// Modal - formulário, busca os agendamentos
+const createDate = document.getElementById("create-date");
+if (createDate) {
+  createDate.addEventListener("change", () => scheduleDay());
+}

@@ -1,5 +1,6 @@
-import dayjs from "dayjs";
 import { scheduleNew } from "../../services/schedule-new.js";
+import dayjs from "dayjs";
+import { scheduleDay } from "../schedules/load.js";
 
 const form = document.querySelector("form");
 const searchDate = document.getElementById("search-date");
@@ -62,6 +63,7 @@ form.onsubmit = async (event) => {
     //Gerar um ID
     const id = new Date().getTime();
 
+    //Realiza o agendamento
     await scheduleNew({
       id,
       userName,
@@ -69,8 +71,18 @@ form.onsubmit = async (event) => {
       cleanedNumber,
       serviceDescription,
       when,
-      hour,
     });
+
+    //Aqui vou fazer algo para fechar o modal após o envio do  agendamento
+
+    //Recarregar os agendamentos
+    await scheduleDay();
+
+    //Limpar os campos digitado no formulário
+    nameInput.value = "";
+    petNameInput.value = "";
+    phoneInput.value = "";
+    descriptionServiceInput.value = "";
   } catch (error) {
     console.error(error);
     alert("Não foi possível realizar o agendamento.");

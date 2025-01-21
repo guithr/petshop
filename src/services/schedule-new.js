@@ -7,7 +7,6 @@ export async function scheduleNew({
   cleanedNumber,
   serviceDescription,
   when,
-  hour,
 }) {
   try {
     //Fazendo a requisição para enviar os dados do agendamento
@@ -23,7 +22,6 @@ export async function scheduleNew({
         cleanedNumber,
         serviceDescription,
         when,
-        hour,
       }),
     });
     //Exibe mensagem de agendamento realizado.
