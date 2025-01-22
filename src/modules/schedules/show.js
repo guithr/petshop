@@ -9,6 +9,7 @@ const perioNight = document.getElementById("period-night");
 export function scheduleShow({ dailySchedules }) {
   try {
     //Primeiro vamos limpar as listas
+    periodMorning.innerHTML = "";
     periodAfternoon.innerHTML = "";
     perioNight.innerHTML = "";
 
