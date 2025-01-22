@@ -1,6 +1,7 @@
 import { scheduleNew } from "../../services/schedule-new.js";
 import dayjs from "dayjs";
 import { scheduleDay } from "../schedules/load.js";
+import { closeModal } from "./close-modal.js";
 
 const form = document.querySelector("form");
 const searchDate = document.getElementById("search-date");
@@ -55,11 +56,10 @@ form.onsubmit = async (event) => {
 
     //  Recupera somente o horário selecionado
     const [hour] = hourSelected.innerText.split(":");
-    console.log(hour);
 
     // Inserir a hora na data
     const when = dayjs(createDate.value).add(hour, "hour");
-    console.log(when);
+
     //Gerar um ID
     const id = new Date().getTime();
 
@@ -83,6 +83,9 @@ form.onsubmit = async (event) => {
     petNameInput.value = "";
     phoneInput.value = "";
     descriptionServiceInput.value = "";
+
+    //Fecha o modal
+    closeModal();
   } catch (error) {
     console.error(error);
     alert("Não foi possível realizar o agendamento.");
