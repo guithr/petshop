@@ -1,6 +1,6 @@
 import { scheduleNew } from "../../services/schedule-new.js";
 import dayjs from "dayjs";
-import { scheduleDay } from "../schedules/load.js";
+import { searchSchedules } from "../schedules/load.js";
 import { closeModal } from "./close-modal.js";
 
 const form = document.querySelector("form");
@@ -73,10 +73,8 @@ form.onsubmit = async (event) => {
       when,
     });
 
-    //Aqui vou fazer algo para fechar o modal após o envio do  agendamento
-
     //Recarregar os agendamentos
-    await scheduleDay();
+    await searchSchedules();
 
     //Limpar os campos digitado no formulário
     nameInput.value = "";
